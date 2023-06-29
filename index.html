@@ -18,6 +18,55 @@
     nav {
       scroll-behavior: smooth;
     }
+
+    .change {
+      font-size: 22px;
+      overflow: hidden;
+      position: relative;
+      color: white;
+    }
+
+    .change::after {
+      content: "Developer";
+      display: inline-block;
+      animation: animation 6.5s steps(9) infinite;
+      width: 0ch;
+      color: white;
+    }
+
+    .change::before {
+      display: inline-block;
+      content: "";
+      width: 2px;
+      height: 100%;
+      background-color: white;
+      position: absolute;
+      right: 0;
+      animation: blinking .4s linear alternate infinite;
+    }
+
+    @keyframes animation {
+      25% {
+        content: "Developer";
+        width: 8.5ch;
+      }
+      40% {
+        width: 0ch;
+      }
+      75% {
+        content: "Designer";
+        width: 7.5ch;
+      }
+      90% {
+        width: 0ch;
+      }
+    }
+
+    @keyframes blinking {
+      100%{
+        opacity: 0;
+      }
+    }
   
   </style>
 
@@ -113,7 +162,7 @@
             <h2 class="hero-title">
               <span>Hello, I'm</span>
               <strong>Sahil Bansal</strong>
-              Digital Marketer from India
+              <p class="change">I'm a </p>
             </h2>
             <p class="hero-text">
               Unleash your brand's digital potential with our expert digital marketer.
