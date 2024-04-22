@@ -9,7 +9,7 @@
   <title>Sahil Bansal &#128516;</title>
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="preload" href="./assets/css/style.css" />
+  <link rel="preload" href="./assets/css/style.css" as="style">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -102,7 +102,6 @@
 
   <script type="text/javascript" src="https://www.quickchat.ai/user_kit/quickchat8vqb7j.min.js" id="quickchat_script"
     scenario_id="7vzpfqqmwt"></script>
-  <meta name="google-site-verification" content="MwD-5A-QiTB5Bv_M9yYhGcK0ZgOgzOQKz1CsYBng22g" />
 
 </head>
 
@@ -168,9 +167,6 @@
   </header>
 
 
-
-
-
   <main>
     <article>
       <!-- HERO -->
@@ -181,7 +177,7 @@
 
           <div class="hero-banner">
 
-            <img class="avatar img-cover" src="./assets/images/hero-banner.jpg" alt="Sahil's Photo" loading="eager" priority="high">
+            <img class="avatar img-cover" src="./assets/images/hero-banner.webp" alt="Sahil's Photo" loading="eager">
 
             <div class="elem elem-1">
               <p class="elem-title">5</p>
@@ -235,10 +231,10 @@
     <div class="container">
 
       <figure class="about-banner">
-        <img src="./assets/images/about-banner.jpg" width="800" height="652" loading="lazy" alt="Sahil's Photo"
+        <img src="./assets/images/about-banner.webp" width="800" height="652" loading="lazy" alt="Sahil's Photo"
           class="img-cover" />
 
-        <img src="./assets/images/absolute-image.jpg" width="800" height="717" loading="lazy" alt="Sahil's Photo"
+        <img src="./assets/images/absolute-image.webp" width="800" height="717" loading="lazy" alt="Sahil's Photo"
           class="abs-img" />
       </figure>
 
@@ -267,10 +263,10 @@
     <div class="container">
 
       <figure class="about-banner">
-        <img src="./assets/images/absolute-image.jpg" width="800" height="652" loading="lazy" alt="Sahil's Photo"
+        <img src="./assets/images/absolute-image.webp" width="800" height="652" loading="lazy" alt="Sahil's Photo"
           class="img-cover" />
 
-        <img src="./assets/images/about-banner.jpg" width="800" height="717" loading="lazy" alt="Sahil's Photo"
+        <img src="./assets/images/about-banner.webp" width="800" height="717" loading="lazy" alt="Sahil's Photo"
           class="abs-img" />
       </figure>
 
@@ -311,7 +307,7 @@
       <ul class="portfolio-list">
         <li>
           <a href="https://bytecodeapps.com/sahil" target="_blank" class="portfolio-card" style="
-                    background-image: url('./assets/images/portfolio-1.jpg');
+                    background-image: url('./assets/images/portfolio-1.webp');
                   ">
             <div class="card-content">
               <p class="card-subtitle">Web</p>
@@ -329,7 +325,7 @@
 
         <li>
           <a href="#" class="portfolio-card" style="
-                    background-image: url('./assets/images/portfolio-2.jpg');
+                    background-image: url('./assets/images/portfolio-2.webp');
                   ">
             <div class="card-content">
               <p class="card-subtitle">Vimeo</p>
@@ -347,7 +343,7 @@
 
         <li>
           <a href="#" class="portfolio-card" style="
-                    background-image: url('./assets/images/portfolio-3.jpg');
+                    background-image: url('./assets/images/portfolio-3.webp');
                   ">
             <div class="card-content">
               <p class="card-subtitle">Soundcloud</p>
@@ -365,7 +361,7 @@
 
         <li>
           <a href="#" class="portfolio-card" style="
-                    background-image: url('./assets/images/portfolio-4.jpg');
+                    background-image: url('./assets/images/portfolio-4.webp');
                   ">
             <div class="card-content">
               <p class="card-subtitle">Details</p>
@@ -658,7 +654,7 @@
           <div class="blog-card">
             <figure class="card-banner">
               <a href="#">
-                <img src="./assets/images/blog-1.jpg" width="1181" height="843" loading="lazy"
+                <img src="./assets/images/blog-1.webp" width="1181" height="843" loading="lazy"
                   alt="Jim Morisson Says when the musics over turn off the light" class="img-cover" />
               </a>
             </figure>
@@ -676,7 +672,7 @@
           <div class="blog-card">
             <figure class="card-banner">
               <a href="#">
-                <img src="./assets/images/blog-2.jpg" width="1181" height="843" loading="lazy"
+                <img src="./assets/images/blog-2.webp" width="1181" height="843" loading="lazy"
                   alt="Jim Morisson Says when the musics over turn off the light" class="img-cover" />
               </a>
             </figure>
@@ -694,7 +690,7 @@
           <div class="blog-card">
             <figure class="card-banner">
               <a href="#">
-                <img src="./assets/images/blog-3.jpg" width="1181" height="843" loading="lazy"
+                <img src="./assets/images/blog-3.webp" width="1181" height="843" loading="lazy"
                   alt="Jim Morisson Says when the musics over turn off the light" class="img-cover" />
               </a>
             </figure>
@@ -745,7 +741,7 @@
   <!-- 
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+  <script rel="preload" src="./assets/js/script.js"></script>
 
   <!-- 
     - ionicon link
