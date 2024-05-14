@@ -210,7 +210,7 @@ body {
 }
 
 .btn-primary.blue:is(:hover, :focus) {
-  background-color: var(--orange-soda);
+  background-color: var(--black);
 }
 
 .img-cover {
