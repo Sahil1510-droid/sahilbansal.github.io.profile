@@ -748,7 +748,7 @@ textarea.contact-input {
 }
 
 .back-to-top.active {
-  right: -5px;
+  right: auto;
   opacity: 1;
   visibility: visible;
 }
