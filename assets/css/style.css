@@ -837,7 +837,7 @@ textarea.contact-input {
   }
 
   .rotate-img {
-    animation: rotate360 15s linear infinite;
+    animation: rotate360 15s linear reverse infinite;
     bottom: -60px;
     display: block;
     left: -60px;
