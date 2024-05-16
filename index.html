@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  
+
   <style>
     nav {
       scroll-behavior: smooth;
@@ -47,7 +47,7 @@
 
     @keyframes animation {
       25% {
-        content: "Developer";
+        content: " Developer";
         width: 8.5ch;
       }
 
@@ -100,6 +100,54 @@
       background: #042977;
       color: white;
     }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
+
+    /* Modal content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      /* Could be more or less, depending on screen size */
+    }
+
+    /* Close button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
   </style>
 
   <script type="text/javascript" defer src="https://www.quickchat.ai/user_kit/quickchat8vqb7j.min.js"
@@ -108,6 +156,19 @@
 </head>
 
 <body id="top">
+
+
+  <!-- Modal structure -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Site Under Development</h2>
+      <p>We update our site regularly. You can visit our site regularly to check updates.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -179,8 +240,8 @@
 
           <div class="hero-banner">
 
-            <img class="avatar img-cover lazyload" fetchpriority="high" width="800" height="652" src="./assets/images/hero-banner.webp"
-              alt="Sahil's Photo" loading="eager">
+            <img class="avatar img-cover lazyload" fetchpriority="high" width="800" height="652"
+              src="./assets/images/hero-banner.webp" alt="Sahil's Photo" loading="eager">
 
             <div class="elem elem-1">
               <p class="elem-title">4</p>
@@ -253,7 +314,7 @@
         </h2>
 
         <p class="section-text">
-          A Full Stack Developer adeptly designs user interfaces with HTML, CSS, and JavaScript, while managing 
+          A Full Stack Developer adeptly designs user interfaces with HTML, CSS, and JavaScript, while managing
           server-side logic and databases using PHP and MySQL, to create cohesive web applications.
         </p>
 
@@ -329,7 +390,8 @@
 
         <!-- Card 2 -->
         <li>
-          <a href="https://bscscan.com/token/0x851700c43e7617aa6794940abb386cfb497d4733" target="_blank" class="portfolio-card" style="
+          <a href="https://bscscan.com/token/0x851700c43e7617aa6794940abb386cfb497d4733" target="_blank"
+            class="portfolio-card" style="
                     background-image: url('./assets/images/portfolio-2.webp');
                   ">
             <div class="card-content">
@@ -719,7 +781,8 @@
             <a href="https://jpas.in/index.php/home/article/view/85" class="card-tag">Non Fungible Token (NFT)</a>
 
             <h3 class="card-title">
-              <a href="https://jpas.in/index.php/home/article/view/85" target="_blank">Survey, Analysis, Benefits, and Provocation</a>
+              <a href="https://jpas.in/index.php/home/article/view/85" target="_blank">Survey, Analysis, Benefits, and
+                Provocation</a>
             </h3>
           </div>
         </li>
@@ -774,13 +837,13 @@
   <footer class="footer">
     <div class="container">
       <p class="copyright">
-        Copyright &copy; 
+        Copyright &copy;
         <script type="text/javascript">
-  document.write(new Date().getFullYear());
-</script> 
+          document.write(new Date().getFullYear());
+        </script>
         <a href="#" class="copyright-link">Sahil Bansal.</a>
       </p>
-       <p class="copyright">All Rights Reseverd</p>
+      <p class="copyright">All Rights Reseverd</p>
 
       <ul class="footer-list">
         <li>
@@ -832,6 +895,32 @@
     })
   </script>
 
+  <script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // Show the modal when the page loads
+      modal.style.display = "block";
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    });
+
+  </script>
 </body>
 
 </html>
