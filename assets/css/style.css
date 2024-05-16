@@ -837,7 +837,7 @@ textarea.contact-input {
   }
 
   .rotate-img {
-    animation: rotate360 15s linear reverse infinite;
+    animation: rotate360 15s linear infinite;
     bottom: -60px;
     display: block;
     left: -60px;
@@ -4492,7 +4492,7 @@ nav {
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 1000;
   /* Sit on top */
   left: 0;
   top: 0;
@@ -4502,34 +4502,97 @@ nav {
   /* Full height */
   overflow: auto;
   /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0);
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
   /* Black w/ opacity */
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  /* Background blur effect */
 }
 
 /* Modal content */
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 80%;
-  /* Could be more or less, depending on screen size */
+  max-width: 500px;
+  /* Maximum width */
+  text-align: center;
+  animation: fade-in 0.5s ease-out, slide-down 0.5s ease-out;
+  /* Add animations */
+  position: relative;
+  overflow: hidden;
+  /* Hide overflow to ensure clean rounded corners */
+}
+
+/* Keyframes for animations */
+@keyframes slide-down {
+  from {
+    transform: translateY(-50%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* Close button */
 .close {
   color: #aaa;
-  float: right;
+  position: absolute;
+  top: 10px;
+  right: 10px;
   font-size: 28px;
   font-weight: bold;
+  transition: color 0.3s;
+  /* Smooth transition for color change */
 }
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* Heading style */
+.modal-content h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Paragraph style */
+.modal-content p {
+  color: #666;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .close {
+    font-size: 24px;
+  }
 }
