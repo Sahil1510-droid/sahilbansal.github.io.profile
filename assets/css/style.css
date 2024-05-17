@@ -224,6 +224,12 @@ body {
   transition: var(--transition-2)
 }
 
+.avatar {
+  width: 100%;
+  height: auto;
+  max-width: 350px; /* Maximum width for the image */
+}
+
 .about-banner,
 .hero-banner {
   border-radius: var(--radius-10)
