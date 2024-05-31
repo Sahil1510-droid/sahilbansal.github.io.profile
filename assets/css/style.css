@@ -185,7 +185,7 @@ html {
 }
 
 body {
-  background-color: var(--space-cadet);
+  background-color: var(--black);
   color: var(--cadet-blue-crayola);
   font-size: 1.6rem;
   line-height: 1.6;
@@ -278,7 +278,7 @@ body {
 }
 
 .header {
-  background-color: var(--space-cadet);
+  background-color: var(--black);
   box-shadow: var(--shadow);
   height: 65px;
   padding-block: 15px;
@@ -758,7 +758,7 @@ textarea.contact-input {
   }
 
   .header.active {
-    background-color: var(--space-cadet);
+    background-color: var(--black);
     box-shadow: var(--shadow);
     padding-block: 20px
   }
