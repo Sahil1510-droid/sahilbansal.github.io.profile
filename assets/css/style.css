@@ -859,7 +859,7 @@ textarea.contact-input {
     border-radius: var(--radius-10);
     display: flex;
     gap: 10px;
-    animation: float 6s ease-in-out infinite;
+    animation: float 3.5s ease-in-out infinite;
     padding: 20px
   }
 
@@ -871,7 +871,7 @@ textarea.contact-input {
     }
 
     50% {
-      transform: translateY(-10px);
+      transform: translateY(-15px);
     }
   }
 
