@@ -256,7 +256,16 @@ body {
 .img-cover {
   height: 100%;
   object-fit: cover;
-  width: 100%
+  width: 100%;
+  transition: transform 0.5s, box-shadow 0.5s;
+  border-radius: 10px; /* Optional rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.15); /* Base shadow */
+  transform-style: preserve-3d; /* Enable 3D transformations */
+}
+
+.img-cover:hover {
+  transform: scale(1.1) rotateX(15deg) rotateY(-15deg); /* Enhanced 3D transform */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2), 0 24px 48px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
 }
 
 .section {
