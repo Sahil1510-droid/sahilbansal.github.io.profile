@@ -189,7 +189,18 @@ body {
   color: var(--cadet-blue-crayola);
   font-size: 1.6rem;
   line-height: 1.6;
+  animation: fadeIn 1s ease-in-out;
   overflow-x: hidden
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 :focus-visible {
@@ -221,7 +232,12 @@ body {
   font-size: var(--fs-5);
   font-weight: var(--fw-600);
   padding: var(--padding, 10px 40px);
-  transition: var(--transition-2)
+  transition: background-color var(--transition-2), box-shadow 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--vivid-sky-blue);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .about-banner,
@@ -341,8 +357,28 @@ body {
 
 .navbar-link {
   padding-block: 3px;
-  transition: var(--transition-1)
+  position: relative;
+  transition: color var(--transition-1);
 }
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--orange-soda);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.navbar-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 
 .btn-submit,
 .portfolio-card {
@@ -823,7 +859,20 @@ textarea.contact-input {
     border-radius: var(--radius-10);
     display: flex;
     gap: 10px;
+    animation: float 6s ease-in-out infinite;
     padding: 20px
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
   }
 
   .elem-1 {
@@ -867,7 +916,7 @@ textarea.contact-input {
   }
 
   .rotate-img {
-    animation: 15s linear reverse infinite rotate360;
+    animation: rotate360 15s linear infinite;
     bottom: -60px;
     display: block;
     left: -60px;
@@ -875,12 +924,12 @@ textarea.contact-input {
   }
 
   @keyframes rotate360 {
-    0% {
-      transform: rotate(0)
+    from {
+      transform: rotate(0deg);
     }
 
     to {
-      transform: rotate(1turn)
+      transform: rotate(360deg);
     }
   }
 
