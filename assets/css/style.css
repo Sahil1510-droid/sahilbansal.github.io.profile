@@ -529,17 +529,32 @@ body {
   font-family: var(--ff-barlow)
 }
 
+@keyframes loadProgress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--progress-width, 100%);
+  }
+}
+
 .skills-progress-box {
   background-color: var(--white);
   border-radius: var(--radius-10);
-  height: 8px
+  height: 8px;
+  overflow: hidden; /* Ensure progress bar stays within bounds */
+  position: relative; /* Required for pseudo-element positioning */
+  margin-bottom: 10px; /* Add spacing between progress bars */
 }
 
 .skills-progress {
   background-color: var(--orange-soda);
   border-radius: inherit;
-  height: 100%
+  height: 100%;
+  width: 0; /* Start with width 0 */
+  animation: loadProgress 5s forwards; /* Animation with a duration of 2 seconds */
 }
+
 
 .contact-card {
   background-color: var(--midnight-blue);
@@ -859,55 +874,75 @@ textarea.contact-input {
     border-radius: var(--radius-10);
     display: flex;
     gap: 10px;
-    animation: float 3.5s ease-in-out infinite;
     padding: 20px
-  }
-
-  @keyframes float {
-
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-
-    50% {
-      transform: translateY(-15px);
-    }
   }
 
   .elem-1 {
     left: -130px;
-    top: 20px
+    top: 20px;
+    animation: float1 3s ease-in-out infinite;
   }
-
+  
+  @keyframes float1 {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+  
   .elem-1 .elem-title {
-    color: var(--vivid-sky-blue)
+    color: var(--vivid-sky-blue);
   }
-
+  
   .elem-2 {
     bottom: 30px;
-    right: -80px
+    right: -80px;
+    animation: float2 3.5s ease-in-out infinite;
   }
-
+  
+  @keyframes float2 {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+  
   .elem-2 .elem-title {
-    color: var(--fiery-rose)
+    color: var(--fiery-rose);
   }
-
+  
   .elem-title {
     font-size: 4.5rem;
-    line-height: 1.1
+    line-height: 1.1;
   }
-
+  
   .elem-text {
     color: var(--black);
     font-weight: var(--fw-700);
     line-height: 1.1;
-    max-width: 10ch
+    max-width: 10ch;
   }
-
+  
   .elem-3 {
     right: -30px;
-    top: -40px
+    top: -40px;
+    animation: float3 3.3s ease-in-out infinite;
+  }
+  
+  @keyframes float3 {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
   }
 
   .elem-3 ion-icon {
