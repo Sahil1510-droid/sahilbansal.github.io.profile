@@ -1635,3 +1635,41 @@ textarea.contact-input {
     font-size: 24px
   }
 }
+
+
+
+#experience {
+  padding: 50px 0;
+  background: #000000;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 10px 0;
+  width: 90%;
+}
+
+.timeline-item {
+  padding: 20px;
+  margin: 10px 0;
+  background-color: var(--klein-blue);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-title {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.timeline-date {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.timeline-description {
+  font-size: 16px;
+  color: #ffffff;
+  margin-top: 10px;
+}
