@@ -1638,38 +1638,133 @@ textarea.contact-input {
 
 
 
+/* Overall section styling for both Experience Sections */
 #experience {
   padding: 50px 0;
-  background: #000000;
+  background: #111111;
+  color: #ffffff;
+  overflow: hidden;
+  position: relative;
 }
 
+/* Container for the timeline */
 .timeline {
   position: relative;
   margin: 0 auto;
-  padding: 10px 0;
+  padding: 40px 0;
   width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  perspective: 1250px; /* Adds depth for 3D effects */
 }
 
+/* Styling for each timeline item */
 .timeline-item {
-  padding: 20px;
-  margin: 10px 0;
-  background-color: var(--klein-blue);
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(145deg, #303f5d, #2c3e50);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transform-style: preserve-3d;
+  will-change: transform, box-shadow;
 }
 
+.timeline-item:hover {
+  transform: translateY(-15px) rotateY(10deg) rotateX(8deg) scale(1.05); /* Added scale and rotation for a more "pop" effect */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(145deg, #1f2b34, #303f5d); /* Slight color shift on hover */
+}
+
+/* Title for each timeline item */
 .timeline-title {
-  font-size: 24px;
+  font-size: 28px;
   color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
 }
 
+.timeline-item:hover .timeline-title {
+  color: #f39c12; /* Change title color on hover */
+}
+
+/* Date styling */
 .timeline-date {
-  font-size: 16px;
-  color: #ffffff;
+  font-size: 18px;
+  color: #f39c12;
+  margin-bottom: 15px;
+  font-style: italic;
+  transition: color 0.3s ease;
 }
 
+.timeline-item:hover .timeline-date {
+  color: #ffffff; /* Change date color on hover */
+}
+
+/* Description text */
 .timeline-description {
   font-size: 16px;
-  color: #ffffff;
+  line-height: 1.6;
+  color: #ecf0f1;
+  max-width: 90%;
   margin-top: 10px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.timeline-item:hover .timeline-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Visual effect for timeline line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, #f39c12, #e74c3c);
+  transform: translateX(-50%);
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, #f39c12, #e74c3c);
+  transform: translateX(-50%);
+}
+
+/* Styling for timeline item number markers */
+.timeline-item::before {
+  content: attr(data-index);
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background: #f39c12;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.timeline-item:hover::before {
+  transform: translateX(-50%) scale(1.2); /* Enlarges the marker slightly on hover */
+  background: #e74c3c; /* Change color of the marker */
 }
