@@ -320,7 +320,7 @@ body {
 }
 
 .header.nav-active {
-  height: 400px;
+  height: 450px;
   transition-duration: .35s
 }
 
