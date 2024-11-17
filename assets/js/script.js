@@ -38,3 +38,9 @@ document.querySelectorAll("nav").forEach(e => {
         t.observe(e)
     })
 });
+
+const startingYear = 2020; // Example starting year
+const currentYear = new Date().getFullYear();
+const yearsPassed = currentYear - startingYear;
+const element = document.querySelector('.elem-title');
+element.textContent = 0 + yearsPassed;
