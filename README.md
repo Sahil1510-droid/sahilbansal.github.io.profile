@@ -1,5 +1,4 @@
 Responsive Protfolio Website made with HTML, CSS and Javascript
 
 Link to the site - https://sahil1510-droid.github.io/sahilbansal.github.io.profile/
-
-![Screenshot (3)](https://github.com/Sahil1510-droid/sahilbansal.github.io.profile/assets/66123690/393b6e4a-1df7-43e6-a150-e8f20211dc62)
+![Screenshot 2024-11-17 083401](https://github.com/user-attachments/assets/2d9ee314-e312-4678-94f9-ce7cfed57b79)
